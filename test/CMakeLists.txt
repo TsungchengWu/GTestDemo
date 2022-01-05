@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 
 set(This ExampleTest)
-set(ResultXmlDir resultXml)
+set(ResultXmlDir xmls)
 project(${This} CXX)
 
 include_directories("../src")
@@ -22,4 +22,4 @@ target_link_libraries(${This} PUBLIC
 # )
 include(GoogleTest)
 gtest_discover_tests(${This} 
-                    XML_OUTPUT_DIR ResultXmlDir)
+                    XML_OUTPUT_DIR ${ResultXmlDir})
