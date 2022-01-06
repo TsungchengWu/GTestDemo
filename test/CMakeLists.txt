@@ -22,4 +22,5 @@ target_link_libraries(${This} PUBLIC
 # )
 include(GoogleTest)
 gtest_discover_tests(${This} 
+                    EXTRA_ARGS --gtest_color=yes
                     XML_OUTPUT_DIR ${ResultXmlDir})
